@@ -1,0 +1,12 @@
+A simple tool/script to collect swap related information.
+Usage:
+	make
+	./fiostat.sh -o xxx
+
+Some options for fiostat.sh:
+-l	lock memory. In swap, application data/code segment can be reclaimed, this
+	makes sure these not happen.
+-d	delay time for each simpling.
+-c	simpling times. If this option isn't enabled, the tool will simpling
+	forever till it's killed.
+-o	output directory.
