@@ -1,12 +1,14 @@
 A simple tool/script to collect swap related information.
-Usage:
-	make
+
+Example usage:
 	./fiostat.sh -o xxx
 
 Some options for fiostat.sh:
--l	lock memory. In swap, application data/code segment can be reclaimed. This
-	makes sure it will not happen.
--d	interval between samplings.
+-l	lock memory. If swap is heavy, memory used by application can be
+	reclaimed. This makes sure it will not happen in this tool. This
+	option is disabled by default.
+-d	interval between samplings. The unit is second. If this option isn't
+	enabled, the sampling interval is 1 second.
 -c	sampling duration. If this option isn't enabled, the tool will sampling
-	forever till it's killed.
+	forever until it's killed.
 -o	output directory.
